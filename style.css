@@ -1,0 +1,32 @@
+html, body{
+    height: 100%    
+}
+
+* {
+    box-sizing: border-box;
+    
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(16, 25px [col-start]);
+  }
+
+  #changeit{
+    border: 1px solid black; 
+    height: 25px; 
+    width: 25px" 
+  }
+
+  .active{
+    background-color: red;
+  }
+
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+}
