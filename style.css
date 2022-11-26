@@ -30,3 +30,24 @@ html, body{
     height: 50%;
     flex-direction: column;
 }
+
+.fix{
+    display: flex;
+    gap: 15px;
+}
+
+button{
+    background-color: tomato;
+    padding: 11px;
+    margin-top: 40px;
+    border-radius: 15px;
+    border: none;
+    color:black;
+    font-weight: 900;
+}
+
+h1{
+    font-family: 'Times New Roman', serif;
+    color: rgb(71, 69, 202);
+    font-weight: 800;
+}
