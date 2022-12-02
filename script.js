@@ -9,13 +9,19 @@ let rainbow_color = false;
 let number = 0;
 arrayofcolors = ["orange", "green", "blue", "yellow", "pink"];
 
-var num_of_boxes = prompt("Enter number of boxes: ");
+var grid_size = Number(prompt("Enter grid size between 6-64"));
+
+while (isNaN(grid_size) || grid_size<6 ||grid_size>64 ) {
+    grid_size = prompt("your input must be an integer between 6-64");
+
+}
 
 
-for (let i = 0; i < num_of_boxes; i++) {      //creates the board 
+for (let i = 0; i < grid_size; i++) {      //creates the board 
+
   const div = document.createElement('div');
   div.setAttribute("id", "changeit")
-  div.setAttribute("class", "default")
+  div.classList.add('default')
   div.textContent = (" ")
   cdiv.appendChild(div);
 }
@@ -24,20 +30,16 @@ const div = document.querySelectorAll('#changeit');
 
 
 div.forEach(divon => {  //sets the background color of the grids/divs to red / rainbow 
-    divon.addEventListener("mouseover", (event) => { 
-    if (divon.className === "notactive" || divon.className === "default"){
-       
-         if (rainbow_color == false){
+    divon.addEventListener("mouseover", (event) => {        
+    if (rainbow_color == false){
                 divon.setAttribute("class", "active")
-            }
+    }
          else{
              var random = arrayofcolors[Math.floor(Math.random()*arrayofcolors.length)]
              divon.setAttribute("class", random)
          }
-    }
-    else{
-        console.log()
-    }
+
+ 
     })
 
   })
